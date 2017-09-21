@@ -1,43 +1,64 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
 
-brew 'ack'
 brew 'coreutils'
-brew 'go'
+brew 'bash-completion'
+brew 'ack'
 brew 'grc'
-brew 'imagemagick'
-brew 'jp2a'
 brew 'jq'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
+brew 'jp2a'
+
 brew 'openssl'
-brew 'node'
 brew 'readline'
+brew 'tmux'
+brew 'screen'
+brew 'wget'
+
+brew 'node'
 brew 'postgresql'
-brew 'puma/puma/puma-dev'
+
 brew 'ruby-build'
 brew 'rbenv'
-brew 'roundup'
-brew 'spaceman-diff'
-brew 'spark'
-brew 'unrar'
-brew 'wget'
-brew 'yarn'
-brew 'youtube-dl'
+brew 'go'
 
-cask '1password'
-cask 'adium'
-cask 'atom'
-cask 'firefox'
-cask 'garmin-express'
+# macOS app store manual installs
+#  apple configurator
+#  1password
+#  evernote
+#  slack
+#  soulver
+#  photosweeper
+#  the unarchiver
+#  hyperdock
+
+# other manul installs
+#   canon printer/scanner drivers and software
+#   encfs & encfsGUI
+
+# cask '1password'
+cask 'dashlane'
+cask 'tunnelblick'
 cask 'google-chrome'
-cask 'handbrake'
-cask 'mapbox-studio'
-cask 'seashore'
-cask 'slack'
-cask 'steam'
+cask 'google-backup-and-sync' # google-drive
+cask 'microsoft-office'
+# cask 'slack'
+# cask 'evernote'
+cask 'dropbox'
+cask 'inkscape'
+
+cask 'airdisplay'
+cask 'airfoil'
+cask 'logitech-myharmony'
+
+cask 'osxfuse'
+cask 'insomniax'
+# cask 'hyperdock'
+cask 'disk-inventory-x'
+cask 'crashplan'
+
+cask 'virtualbox'
+cask 'docker'
+cask 'macvim'
+cask 'atom'
 cask 'transmission'
-cask 'tunnelbear'
-cask 'vlc'
