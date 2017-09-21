@@ -20,6 +20,7 @@ brew 'wget'
 brew 'node'
 brew 'postgresql'
 
+brew 'ruby'
 brew 'ruby-build'
 brew 'rbenv'
 brew 'go'
