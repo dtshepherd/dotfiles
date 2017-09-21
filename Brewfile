@@ -24,26 +24,25 @@ brew 'go'
 
 # macOS app store manual installs
 #  apple configurator
-#  1password
-#  evernote
-#  slack
+#  hyperdock (due to licensing)
 #  soulver
 #  photosweeper
 #  the unarchiver
-#  hyperdock
 
 # other manul installs
 #   canon printer/scanner drivers and software
 #   encfs & encfsGUI
 
-# cask '1password'
+cask '1password'
 cask 'dashlane'
 cask 'tunnelblick'
+cask 'teamviewer'
 cask 'google-chrome'
 cask 'google-backup-and-sync' # google-drive
 cask 'microsoft-office'
-# cask 'slack'
-# cask 'evernote'
+cask 'slack'
+cask 'skype'
+cask 'evernote'
 cask 'dropbox'
 cask 'inkscape'
 
@@ -53,7 +52,6 @@ cask 'logitech-myharmony'
 
 cask 'osxfuse'
 cask 'insomniax'
-# cask 'hyperdock'
 cask 'disk-inventory-x'
 cask 'crashplan'
 
