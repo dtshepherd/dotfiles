@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'caskroom/drivers'
 
 brew 'coreutils'
 brew 'bash-completion'
@@ -44,6 +45,7 @@ cask 'slack'
 cask 'skype'
 cask 'evernote'
 cask 'dropbox'
+cask 'xquartz'
 cask 'inkscape'
 
 cask 'airdisplay'
