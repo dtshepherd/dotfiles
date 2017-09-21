@@ -23,6 +23,8 @@ brew 'postgresql'
 brew 'ruby-build'
 brew 'rbenv'
 brew 'go'
+brew 'python'
+brew 'python3'
 
 # macOS app store manual installs
 #  apple configurator
