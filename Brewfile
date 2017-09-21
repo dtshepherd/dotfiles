@@ -9,6 +9,7 @@ brew 'ack'
 brew 'grc'
 brew 'jq'
 brew 'jp2a'
+brew 'git'
 
 brew 'openssl'
 brew 'readline'

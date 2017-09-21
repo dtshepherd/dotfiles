@@ -1,26 +1,12 @@
-# Local/private config goes in the include
 [include]
+	path = ~/.gitaliases
+        path = ~/.gitconfig.github-user
+        # Local/private config goes in the include
         path = ~/.gitconfig.local
-[hub]
-        protocol = https
-[alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
-[color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+	path = ~/.gitaliases.local
 [core]
-        excludesfile = ~/.gitignore
         editor = vim
-[apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
+        excludesfile = ~/.gitignore
 [difftool]
         prompt = false
 [help]
@@ -31,3 +17,27 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+[hub]
+        protocol = https
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+# [color "branch"]
+# 	current = yellow reverse
+# 	local = yellow
+# 	remote = green
+# [color "diff"]
+# 	meta = yellow bold
+# 	frag = magenta bold
+# 	old = red bold
+# 	new = green bold
+# 	whitespace = red reverse
+# [color "status"]
+# 	added = green
+# 	changed = red
+# 	untracked = cyan
+
+[url "TO URL"]
+	insteadOf = "FROM URL"
