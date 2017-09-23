@@ -45,6 +45,7 @@ cask 'slack'
 cask 'skype'
 cask 'evernote'
 cask 'dropbox'
+cask 'quik'
 cask 'xquartz'
 cask 'inkscape'
 
