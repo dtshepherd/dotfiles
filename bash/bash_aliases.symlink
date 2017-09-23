@@ -1,0 +1,24 @@
+# vim: set ft=sh:
+
+# enable color support of ls and also add handy aliases
+if [ -n "$LSCOLORS" ] || [ -n "$LS_COLORS" ]
+then
+    # macOS color output enabled by environment variable CLICOLOR
+    if [ "$(uname -s)" != "Darwin" ]
+    then
+        alias ls='ls --color=auto'
+        alias dir='dir --color=auto'
+        alias vdir='vdir --color=auto'
+
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+[[ -s "$HOME/.bash_aliases.local" ]] && source "$HOME/.base_aliases.local"

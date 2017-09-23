@@ -4,11 +4,28 @@
 
 set -e
 
-cd "$(dirname $0)"/..
+# root directory for all dotfiles
+export DOTFILES=$HOME/.dotfiles
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+# check if we have an internet connection
+export INTERNET_CONNECTION=$(ping -q 8.8.8.8 -W 1 -c 1 > /dev/null 2>&1 && echo "yes")
+
+# pre-cache sudo creds
+sudo ls > /dev/null
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find $DOTFILES -maxdepth 2 -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+if [ -n "$INTERNET_CONNECTION" ]
+then
+    # Upgrade homebrew
+    echo "› brew update"
+    brew update
+
+    # Run Homebrew through the Brewfile
+    echo "› brew bundle"
+    cd $DOTFILES
+    brew bundle
+else
+    echo "> skipping brew without - no internet connection"
+fi

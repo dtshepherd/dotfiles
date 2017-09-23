@@ -1,0 +1,39 @@
+# vim: set ft=sh:
+
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/.dotfiles
+
+# load the path files
+for file in $(find $DOTFILES -maxdepth 2 -name "path.sh")
+do
+    source $file
+done
+
+# load everything but the path and completion files
+for file in $(find $DOTFILES -maxdepth 2 -name "*.sh" ! -name "install.sh" ! -name "completion.sh")
+do
+    source $file
+done
+
+# load global aliases
+[[ -s ~/.bash_aliases ]] && source ~/.bash_aliases
+
+# initialize autocomplete
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then # linux
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /usr/local/etc/bash_completion ]; then # macOS
+    . /usr/local/etc/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# load completion after autocomplete loads
+for file in $(find $DOTFILES -maxdepth 2 -name "completion.sh")
+do
+    source $file
+done
+
+# load bashrc local
+[[ -s ~/.bashrc.local ]] && source ~/.bashrc.local

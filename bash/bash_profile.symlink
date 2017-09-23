@@ -1,0 +1,7 @@
+# vim: set ft=sh:
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.bash_profile.local" ]] && source "$HOME/.bash_profile.local"
+
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load bashrc for login shells
