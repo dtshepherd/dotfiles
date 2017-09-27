@@ -14,16 +14,20 @@ export INTERNET_CONNECTION=$(ping -q 8.8.8.8 -W 1 -c 1 > /dev/null 2>&1 && echo 
 sudo ls > /dev/null
 
 # find the installers and run them iteratively
-find $DOTFILES -maxdepth 2 -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find -H "$DOTFILES" "$@" -maxdepth 2 -name install.sh | while read installer
+do
+    echo "> install ${installer}"
+    sh -c "${installer}"
+done
 
 if [ -n "$INTERNET_CONNECTION" ]
 then
     # Upgrade homebrew
-    echo "› brew update"
+    echo "> brew update"
     brew update
 
     # Run Homebrew through the Brewfile
-    echo "› brew bundle"
+    echo "> brew bundle"
     cd $DOTFILES
     brew bundle
 else

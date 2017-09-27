@@ -107,7 +107,7 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES" -maxdepth 2 -name '*.symlink' -not -path '.git')
+  for src in $(find -H "$@" -maxdepth 2 -name '*.symlink' -not -path '.git')
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
@@ -146,11 +146,11 @@ setup_gitconfig () {
   fi
 }
 
-install_dotfiles
+install_dotfiles "$DOTFILES" "$@"
 setup_gitconfig
 
 info "installing dependencies"
-if source bin/dot | while read -r data; do info "$data"; done
+if source bin/dot "$@" | while read -r data; do info "$data"; done
 then
   success "dependencies installed"
 else
