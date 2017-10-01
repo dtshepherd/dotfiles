@@ -71,7 +71,6 @@ if OS.mac?
   # macOS app store installs (mostly due to licenses)
   mas "1Password", id: 443987910
   mas "Apple Configurator 2", id: 1037126344
-  mas "GarageBand", id: 682658836
   mas "HyperDock", id: 449830122
   mas "iMovie", id: 408981434
   mas "Keynote", id: 409183694
