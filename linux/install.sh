@@ -4,7 +4,7 @@ test "$(uname)" != "Linux" && return
 
 if [ -f "/etc/redhat-release" ]
 then
-    sudo yum groupinstall "Development Tools"
+    sudo yum groupinstall -y "Development Tools"
     sudo yum install -y \
         kernel \
         kernel-headers \
