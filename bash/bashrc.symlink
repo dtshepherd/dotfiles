@@ -1,5 +1,7 @@
 # vim: set ft=sh:
 
+[[ -s "/etc/bashrc" ]] && source "/etc/bashrc" # Load global bashrc
+
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
 
