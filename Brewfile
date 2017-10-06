@@ -64,6 +64,7 @@ if OS.mac?
 
   cask 'virtualbox'
   cask 'docker'
+  cask 'vagrant'
   cask 'macvim'
   cask 'atom'
   cask 'transmission'
