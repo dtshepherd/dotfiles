@@ -43,3 +43,6 @@ Noxmap   <Space>xdw         :StripTrailingWhitespace<CR>
 " Use cpsm matcher for CtrlP.
 let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:cpsm_query_inverting_delimiter = ' '
+
+" So the left status column doesn't always show in Vim 8.2
+let g:ale_sign_column_always = 0
