@@ -21,4 +21,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-[[ -s "$HOME/.bash_aliases.local" ]] && source "$HOME/.base_aliases.local"
+# kubernetes
+alias kctx='kubectl config current-context'
+alias k='kubectl'
+alias ksys='kubectl --namespace=kube-system'
+
+[[ -s "$HOME/.bash_aliases.local" ]] && source "$HOME/.bash_aliases.local"
