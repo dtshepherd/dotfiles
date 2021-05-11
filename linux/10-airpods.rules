@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="bluetooth", ATTRS{address}=="14:87:6A:36:17:B4", RUN+="/bin/systemctl restart ofono-phonesim"
