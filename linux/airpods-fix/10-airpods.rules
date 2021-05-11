@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="input", ATTRS{name}=="14:87:6A:36:17:B4", TAG+="systemd", ENV{SYSTEMD_WANTS}+="airpods-fix.service"

@@ -1,0 +1,9 @@
+[Unit]
+Description=Fix airpods microphone headset
+
+[Service]
+Type=oneshot
+ExecStart=/opt/airpods-fix/airpods-add.sh
+
+[Install]
+WantedBy=multi-user.target
