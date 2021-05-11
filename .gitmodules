@@ -4,3 +4,15 @@
 [submodule "tmux/tmux.symlink"]
 	path = tmux/tmux.symlink
 	url = git@github.com:gpakosz/.tmux.git
+[submodule "linux/Linux-Magic-Trackpad-2-Driver"]
+	path = linux/Linux-Magic-Trackpad-2-Driver
+	url = https://github.com/rohitpid/Linux-Magic-Trackpad-2-Driver
+[submodule "linux/gnome-terminal-colors-solarized"]
+	path = linux/gnome-terminal-colors-solarized
+	url = git@github.com:aruhier/gnome-terminal-colors-solarized.git
+[submodule "linux/kinto"]
+	path = linux/kinto
+	url = git@github.com:rbreaves/kinto.git
+[submodule "linux/ofono"]
+	path = linux/ofono
+	url = git://git.kernel.org/pub/scm/network/ofono/ofono.git

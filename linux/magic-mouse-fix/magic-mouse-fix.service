@@ -1,0 +1,9 @@
+[Unit]
+Description=Fix magic mouse scrolling
+
+[Service]
+Type=oneshot
+ExecStart=/opt/magic-mouse-fix/magic-mouse-2-add.sh
+
+[Install]
+WantedBy=multi-user.target

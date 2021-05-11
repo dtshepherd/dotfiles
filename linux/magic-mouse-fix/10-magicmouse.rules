@@ -1,0 +1,10 @@
+SUBSYSTEM=="input", \
+    KERNEL=="mouse*", \
+    DRIVER=="", \
+    SUBSYSTEMS=="hid", \
+    KERNELS=="0005:004C:0269*", \
+    DRIVERS=="hid-generic|magicmouse", \
+    ACTION=="add", \
+    SYMLINK+="input/magicmouse-%k", \
+    TAG+="systemd", \
+    ENV{SYSTEMD_WANTS}+="magic-mouse-fix.service"
