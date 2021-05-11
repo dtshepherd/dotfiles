@@ -19,6 +19,15 @@ function! CustomSetupRuby()
 endfunction
 command! -bar SetupRuby call CustomSetupRuby()
 
+function! CustomSetupCpp()
+    call SetupCpp()
+
+    setlocal tw=120
+    Highlight nolonglines
+    let g:ale_c_parse_compile_commands = 1
+    let g:ale_c_build_dir_names = ["ps/build/app/host/debug", "ps/build/app/host/release"]
+endfunction
+command! -bar SetupCpp call CustomSetupCpp()
 
 call extend(g:airline_symbols, {
         \ 'readonly': "RO",
