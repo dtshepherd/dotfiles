@@ -24,10 +24,24 @@ function! CustomSetupCpp()
 
     setlocal tw=120
     Highlight nolonglines
-    let g:ale_c_parse_compile_commands = 1
-    let g:ale_c_build_dir_names = ["ps/build/app/host/debug", "ps/build/app/host/release"]
 endfunction
 command! -bar SetupCpp call CustomSetupCpp()
+
+function! CustomSetupC()
+    call SetupC()
+
+    setlocal tw=120
+    Highlight nolonglines
+endfunction
+command! -bar SetupC call CustomSetupC()
+
+function! CustomSetupPython()
+    call SetupPython()
+
+    setlocal tw=120
+    Highlight nolonglines
+endfunction
+command! -bar SetupPython call CustomSetupPython()
 
 call extend(g:airline_symbols, {
         \ 'readonly': "RO",
