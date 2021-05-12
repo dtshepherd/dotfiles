@@ -12,6 +12,6 @@ if !has("gui_running")
 endif
 let g:solarized_diffmode = "high"
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 let g:Powerline_colorscheme = "solarized256"

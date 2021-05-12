@@ -16,3 +16,6 @@
 [submodule "linux/ofono"]
 	path = linux/ofono
 	url = git://git.kernel.org/pub/scm/network/ofono/ofono.git
+[submodule "vim/bundle/solarized8"]
+	path = vim/bundle/solarized8
+	url = git@github.com:lifepillar/vim-solarized8.git
