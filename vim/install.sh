@@ -1,7 +1,7 @@
 for src in $(find "$DOTFILES/vim/bundle" -mindepth 1 -maxdepth 1 -type d)
 do
     echo "Installing vim bundle $src"
-    ln -s "$src" "$DOTFILES/vim/vim.symlink/bundle/"
+    ln -sf "$src" "$DOTFILES/vim/vim.symlink/bundle/"
 done
 
 [ -z "$INTERNET_CONNECTION" ] && exit 0
